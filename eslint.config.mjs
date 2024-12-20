@@ -1,14 +1,14 @@
 import js from '@eslint/js'
 import { FlatCompat } from '@eslint/eslintrc'
 
-const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
+const compat = new FlatCompat({  
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended
 })
 
 const eslintConfig = [
   ...compat.config({
+    ignorePatterns: ['src/types/**'],
     extends: ['eslint:recommended', 'next', 'prettier'],
     rules: {
       'no-undef': 'off',
@@ -17,7 +17,7 @@ const eslintConfig = [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/explit-module-boundary-types': 'off'
-    }
+    },
   })
 ]
 

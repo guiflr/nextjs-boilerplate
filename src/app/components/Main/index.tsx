@@ -1,7 +1,9 @@
+import { Wrapper } from './styles'
+
 export const Main = () => {
   return (
-    <div>
+    <Wrapper>
       <h1>Main teste</h1>
-    </div>
+    </Wrapper>
   )
 }
