@@ -8,8 +8,8 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.config({
-    ignorePatterns: ['src/types/**'],
-    extends: ['eslint:recommended', 'next', 'prettier'],
+    ignorePatterns: ['src/types/**', './.storybook/**'],
+    extends: ['eslint:recommended', 'next', 'prettier', 'plugin:storybook/recommended'],
     rules: {
       'no-undef': 'off',
       'react-hooks/rules-of-hooks': 'error',
